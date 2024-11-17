@@ -1,0 +1,288 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.header {
+    min-height: 60vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(223, 226, 226, 0.77),
+            rgba(169, 226, 218, 0.439), rgba(28, 26, 26, 0.7)),
+        url(image/background.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 350px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 10px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: rgb(3, 9, 57);
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.nav-links ul li:hover {
+    background-color: #7e3c384c;
+    transition: 0.5s;
+}
+
+.text-box {
+    width: 90%;
+    color: rgb(45, 50, 88);
+    position: absolute;
+    top: 50%;
+    left: 54%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 52px;
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 14px;
+}
+
+nav .fa {
+    display: none;
+}
+
+@media(max-width: 700px) {
+    nav img {
+        width: 200px;
+    }
+
+    .text-box h1 {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        position: absolute;
+        background: #78eef3;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 0.5s;
+    }
+
+    nav .fa {
+        display: block;
+        color: rgb(5, 45, 45);
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .nav-links ul {
+        padding: 30px;
+    }
+
+}
+
+.row {
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 2.5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.midder-col {
+    flex-basis: 33%;
+    background: #b4d8d0c7;
+    border-radius: 10px;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.heading {
+    color: rgb(31, 45, 22);
+    background: #78eef3;
+    text-align: center;
+    margin: 10px 0;
+    border-radius: 7px;
+    padding: 5px;
+}
+
+.heading h3 {
+    font-weight: 700;
+}
+
+.midder-col:hover {
+    box-shadow: 0 0 20px 0px rgba(143, 66, 66, 0.764);
+}
+
+.latest-news-ul {
+    padding: 0;
+    list-style: none;
+    line-height: 40px;
+}
+
+.latest-news-ul li {
+    font-weight: 600;
+}
+
+.upcoming-event-list {
+    padding: 0px;
+    list-style: none;
+}
+
+.upcoming-event-list li {
+    font-weight: 600;
+    width: 100%;
+    float: left;
+    margin: 15px;
+}
+
+.event-data {
+    background-color: #03a9f4;
+    float: left;
+    text-align: center;
+    font-size: 12px;
+    color: white;
+    margin-right: 10px;
+}
+
+.notice-board-list {
+    padding: 0px;
+    list-style: none;
+    line-height: 40px;
+}
+
+.notice-board-list li {
+    font-weight: 600;
+    width: 100%;
+    float: left;
+}
+
+@media(max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .midder-col {
+        margin: 2px;
+    }
+}
+
+.useful-info-ul {
+    list-style: none;
+}
+
+.useful-info-ul li {
+    margin-bottom: 15px;
+    border-bottom: 2px solid #d7d7d7;
+    padding-bottom: 15px;
+}
+
+.useful-info-ul a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.useful-info-ul a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.useful-info-ul a:hover::after {
+    width: 100%;
+}
+
+.useful-info-ul a:hover {
+    background-color: #7e3c384c;
+    transition: 0.5s;
+}
+
+.gov-sec-style {
+    margin-bottom: 30px;
+    border-bottom: 2px solid #d7d7d7;
+}
+
+.governor-name {
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+    padding-left: 30px;
+    margin-top: 20px;
+}
+
+.governor-designation {
+    font-size: 15px;
+    color: black;
+    padding-left: 30px;
+    margin-top: 6px;
+}
+
+.governor-img {
+    width: 100%;
+}
+
+.width-40 {
+    width: 40%;
+    float: left;
+}
+
+.width-60 {
+    width: 60%;
+    float: left;
+}
+
+.certificate img {
+    height: 300px;
+}
+
+@media(max-width: 700px) {
+    .certificate img {
+        height: 250px;
+    }
+}
